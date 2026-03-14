@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collections - Nostra</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header class="header">
+        <div class="header-top">
+            <p>Sign Up and <strong>GET 20% OFF</strong> for your first Order</p>
+        </div>
+        
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">NOSTRA</div>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#new-arrival">New Arrival</a></li>
+                    <li><a href="index.html#most-wanted">Most Wanted</a></li>
+                    <li><a href="collections.html" class="active">Collections</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+                <div class="nav-icons">
+                    <i class="fas fa-search"></i>
+                    <i class="fas fa-shopping-cart"></i>
+                    <i class="fas fa-user"></i>
+                </div>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="collections-main">
+        <!-- Page Title -->
+        <section class="page-header">
+            <h1>Our Collections</h1>
+            <p>Browse our extensive collection of premium fashion items</p>
+        </section>
+
+        <div class="collections-container">
+            <!-- Sidebar Filter -->
+            <aside class="filter-sidebar">
+                <h3>Filter Products</h3>
+                
+                <!-- Search Box -->
+                <div class="filter-group">
+                    <h4>Search</h4>
+                    <input 
+                        type="text" 
+                        id="searchInput" 
+                        class="search-box" 
+                        placeholder="Search products..."
+                        onkeyup="filterAndSearch()"
+                    >
+                </div>
+
+                <!-- Category Filter -->
+                <div class="filter-group">
+                    <h4>Category</h4>
+                    <label class="filter-label">
+                        <input type="checkbox" value="all" onchange="filterAndSearch()" checked>
+                        All Products
+                    </label>
+                    <label class="filter-label">
+                        <input type="checkbox" value="men" onchange="filterAndSearch()">
+                        Men's Fashion
+                    </label>
+                    <label class="filter-label">
+                        <input type="checkbox" value="women" onchange="filterAndSearch()">
+                        Women's Fashion
+                    </label>
+                    <label class="filter-label">
+                        <input type="checkbox" value="accessories" onchange="filterAndSearch()">
+                        Accessories
+                    </label>
+                    <label class="filter-label">
+                        <input type="checkbox" value="shoes" onchange="filterAndSearch()">
+                        Shoes
+                    </label>
+                </div>
+
+                <!-- Price Filter -->
+                <div class="filter-group">
+                    <h4>Price Range</h4>
+                    <input 
+                        type="range" 
+                        id="priceFilter" 
+                        min="0" 
+                        max="200" 
+                        value="200"
+                        onchange="filterAndSearch()"
+                        class="price-slider"
+                    >
+                    <p>Price: $<span id="priceValue">200</span> and below</p>
+                </div>
+
+                <!-- Size Filter -->
+                <div class="filter-group">
+                    <h4>Size</h4>
+                    <label class="filter-label">
+                        <input type="checkbox" value="xs" onchange="filterAndSearch()">
+                        XS
+                    </label>
+                    <label class="filter-label">
+                        <input type="checkbox" value="s" onchange="filterAndSearch()">
+                        S
+                    </label>
+                    <label class="filter-label">
+                        <input type="checkbox" value="m" onchange="filterAndSearch()">
+                        M
+                    </label>
+                    <label class="filter-label">
+                        <input type="checkbox" value="l" onchange="filterAndSearch()">
+                        L
+                    </label>
+                    <label class="filter-label">
+                        <input type="checkbox" value="xl" onchange="filterAndSearch()">
+                        XL
+                    </label>
+                </div>
+
+                <!-- Color Filter -->
+                <div class="filter-group">
+                    <h4>Color</h4>
+                    <div class="color-filters">
+                        <label class="color-box" style="background-color: #000;" title="Black">
+                            <input type="checkbox" value="black" onchange="filterAndSearch()">
+                        </label>
+                        <label class="color-box" style="background-color: #fff; border: 1px solid #ccc;" title="White">
+                            <input type="checkbox" value="white" onchange="filterAndSearch()">
+                        </label>
+                        <label class="color-box" style="background-color: #FF6B6B;" title="Red">
+                            <input type="checkbox" value="red" onchange="filterAndSearch()">
+                        </label>
+                        <label class="color-box" style="background-color: #4ECDC4;" title="Teal">
+                            <input type="checkbox" value="teal" onchange="filterAndSearch()">
+                        </label>
+                        <label class="color-box" style="background-color: #FFE66D;" title="Yellow">
+                            <input type="checkbox" value="yellow" onchange="filterAndSearch()">
+                        </label>
+                        <label class="color-box" style="background-color: #95E1D3;" title="Mint">
+                            <input type="checkbox" value="mint" onchange="filterAndSearch()">
+                        </label>
+                    </div>
+                </div>
+
+                <button class="btn btn-secondary" onclick="resetFilters()">Reset Filters</button>
+            </aside>
+
+            <!-- Products Grid -->
+            <section class="products-section">
+                <div class="section-header">
+                    <h2>All Products</h2>
+                    <div class="sort-options">
+                        <label for="sortBy">Sort by:</label>
+                        <select id="sortBy" onchange="sortProducts()">
+                            <option value="default">Default</option>
+                            <option value="price-low">Price: Low to High</option>
+                            <option value="price-high">Price: High to Low</option>
+                            <option value="name">Name: A to Z</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Results Count -->
+                <p class="results-count">Showing <span id="resultCount">0</span> products</p>
+
+                <!-- Products Grid -->
+                <div class="products-grid" id="productsContainer">
+                    <!-- Products will be dynamically loaded here -->
+                </div>
+
+                <!-- No Results Message -->
+                <div id="noResults" class="no-results" style="display: none;">
+                    <p>No products found matching your filters.</p>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Nostra</h3>
+                <p>The Standard chunk of Lorem ipsum used since the 1500s is reproduced below for those interested.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="collections.html">Collections</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="#about">About Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Nostra.com. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

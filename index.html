@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nostra - E-Commerce Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header class="header">
+        <div class="header-top">
+            <p>Sign Up and <strong>GET 20% OFF</strong> for your first Order</p>
+        </div>
+        
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">NOSTRA</div>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="#new-arrival">New Arrival</a></li>
+                    <li><a href="#most-wanted">Most Wanted</a></li>
+                    <li><a href="collections.html">Collections</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+                <div class="nav-icons">
+                    <i class="fas fa-search"></i>
+                    <i class="fas fa-shopping-cart"></i>
+                    <i class="fas fa-user"></i>
+                </div>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section with Slider -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Level up your style with our</h1>
+            <h2>Summer Collections</h2>
+            <button class="btn btn-primary">Shop Now</button>
+        </div>
+        <div class="hero-slider">
+            <div class="slider-container">
+                <div class="slide fade">
+                    <img src="https://i.pinimg.com/1200x/01/8c/df/018cdff507e0c7ffc3a3aa9659672fbb.jpg" alt="Summer Collection 1">
+                </div>
+                <div class="slide fade">
+                    <img src="https://i.pinimg.com/736x/31/2d/ae/312daead79e6d1e71fa3812e10daf885.jpg" alt="Summer Collection 2">
+                </div>
+                <div class="slide fade">
+                    <img src="https://i.pinimg.com/1200x/20/e4/cf/20e4cfaaa802b9417a1a177ca3020b77.jpg" alt="Summer Collection 3">
+                </div>
+                <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+                <a class="next" onclick="changeSlide(1)">&#10095;</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Brands Section -->
+    <section class="brands">
+        <h2>Trusted Brands</h2>
+        <div class="brands-container">
+            <div class="brands-scroll">
+                <div class="brand-item">
+                    <img src="https://i.pinimg.com/1200x/76/05/63/76056313238be2605c84cf2b0814f9a6.jpg" alt="Puma">
+                    <p>Puma</p>
+                </div>
+                <div class="brand-item">
+                    <img src="https://i.pinimg.com/1200x/91/41/ae/9141ae5ccfa0ea4ff7b9e9f6afd4305e.jpg" alt="Adidas">
+                    <p>Adidas</p>
+                </div>
+                <div class="brand-item">
+                    <img src="https://i.pinimg.com/736x/03/27/25/032725b56d081e607ca764a51705a595.jpg" alt="Nike">
+                    <p>Nike</p>
+                </div>
+                <div class="brand-item">
+                    <img src="https://i.pinimg.com/1200x/8a/76/35/8a7635bf8183677381891d78675ac7dd.jpg" alt="Reebok">
+                    <p>Reebok</p>
+                </div>
+                <div class="brand-item">
+                    <img src="https://i.pinimg.com/736x/16/82/e0/1682e064d9a7a3ebd4595877c05a5d1b.jpg" alt="Tommy Hilfiger">
+                    <p>Tommy Hilfiger</p>
+                </div>
+                <div class="brand-item">
+                    <img src="https://i.pinimg.com/736x/a4/dc/45/a4dc457a6c0fabcbc6d829ee45c38eca.jpg" alt="Levis">
+                    <p>Levis</p>
+                </div>
+                <div class="brand-item">
+                    <img src="https://i.pinimg.com/736x/4f/92/6c/4f926cae2de49eb2234e9fa639ccfea0.jpg" alt="Gucci">
+                    <p>Gucci</p>
+                </div>
+                <div class="brand-item">
+                    <img src="https://i.pinimg.com/1200x/6c/14/ee/6c14ee37c302f82bd4f0f813989611ed.jpg" alt="The North Face">
+                    <p>The North Face</p>
+                </div>
+                <!-- Duplicate for seamless loop -->
+                <div class="brand-item">
+                    <img src="https://i.pinimg.com/736x/89/3e/d7/893ed7b40f52da3aa3fd35c046098928.jpg" alt="Polo Ralph Lauren">
+                    <p>Polo Ralph Lauren</p>
+                </div>
+                <div class="brand-item">
+                    <img src="https://i.pinimg.com/736x/12/54/98/12549898ec813a9a7e1bd9550df23a57.jpg" alt="Calvin Klein">
+                    <p>Calvin Klein</p>
+                </div>
+                <div class="brand-item">
+                    <img src="https://i.pinimg.com/1200x/77/64/bc/7764bc44ae87c639ab1706e38fbddbb7.jpg" alt="Hennes & Mauritz AB">
+                    <p>Hennes & Mauritz AB</p>
+                </div>
+                <div class="brand-item">
+                    <img src="https://i.pinimg.com/736x/a8/17/b8/a817b88538ab41e507e9137e29a9acef.jpg" alt="Burberry">
+                    <p>Burberry</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <h2>We Provide Best <span>Customer Experiences</span></h2>
+        <p>We ensure that our customers have the best shopping experience</p>
+        <div class="features-grid">
+            <div class="feature-item">
+                <i class="fas fa-box"></i>
+                <h3>Original Products</h3>
+                <p>100% authentic products sourced from trusted suppliers worldwide.</p>
+            </div>
+            <div class="feature-item">
+                <i class="fas fa-thumbs-up"></i>
+                <h3>Satisfaction Guarantee</h3>
+                <p>Your satisfaction is our priority. 30-day money-back guarantee.</p>
+            </div>
+            <div class="feature-item">
+                <i class="fas fa-sync"></i>
+                <h3>New Arrival Everyday</h3>
+                <p>Fresh styles added daily to keep your wardrobe updated.</p>
+            </div>
+            <div class="feature-item">
+                <i class="fas fa-shipping-fast"></i>
+                <h3>Fast & Free Shipping</h3>
+                <p>Free shipping on orders over $50. Express delivery available.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- New Arrivals Section -->
+    <section class="new-arrivals" id="new-arrival">
+        <h2>New Arrivals</h2>
+        <div class="products-grid">
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://i.pinimg.com/736x/1d/2d/c6/1d2dc6639e55b2ff12c878af24f2de59.jpg" alt="Stylish Jacket">
+                </div>
+                <h3>Stylish Jacket</h3>
+                <p class="price">$79.99</p>
+                <button class="btn-quick">Shop Now</button>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://i.pinimg.com/736x/46/7f/cc/467fccc4d8f869f2712a8fa3cd0b582e.jpg" alt="Summer Dress">
+                </div>
+                <h3>Summer Dress</h3>
+                <p class="price">$59.99</p>
+                <button class="btn-quick">Shop Now</button>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://i.pinimg.com/736x/83/fb/9e/83fb9e53b0681f6dd34b4a9aeed22bb5.jpg" alt="Casual Shirt">
+                </div>
+                <h3>Casual Shirt</h3>
+                <p class="price">$49.99</p>
+                <button class="btn-quick">Shop Now</button>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://i.pinimg.com/736x/76/1b/80/761b8036db81cb1ac93717608b896897.jpg" alt="Denim Jeans">
+                </div>
+                <h3>Denim Jeans</h3>
+                <p class="price">$69.99</p>
+                <button class="btn-quick">Shop Now</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Most Wanted Section -->
+    <section class="most-wanted" id="most-wanted">
+        <h2>Most Wanted</h2>
+        <div class="products-grid">
+            <div class="product-card featured">
+                <span class="badge">sale</span>
+                <div class="product-image">
+                    <img src="https://i.pinimg.com/1200x/00/50/8b/00508b100b63fc23ce647cb36c0e3e0e.jpg" alt="Premium Boots">
+                </div>
+                <i class="fas fa-heart heart-icon"></i>
+                <h3>Premium Boots</h3>
+                <p class="price"><span class="original">$99.99</span> $49.99</p>
+                <button class="btn-quick">Shop Now</button>
+            </div>
+            <div class="product-card featured">
+                <span class="badge">sale</span>
+                <div class="product-image">
+                    <img src="https://i.pinimg.com/1200x/37/80/d6/3780d669d5a93fb142ed363b04627c3e.jpg" alt="Athletic Shoes">
+                </div>
+                <i class="fas fa-heart heart-icon"></i>
+                <h3>Athletic Shoes</h3>
+                <p class="price"><span class="original">$89.99</span> $44.99</p>
+                <button class="btn-quick">Shop Now</button>
+            </div>
+            <div class="product-card featured">
+                <span class="badge">sale</span>
+                <div class="product-image">
+                    <img src="https://i.pinimg.com/1200x/42/6f/30/426f3029463e3c3796d7d80e9852d750.jpg" alt="Trendy Cap">
+                </div>
+                <i class="fas fa-heart heart-icon"></i>
+                <h3>Trendy Cap</h3>
+                <p class="price"><span class="original">$39.99</span> $19.99</p>
+                <button class="btn-quick">Shop Now</button>
+            </div>
+            <div class="product-card featured">
+                <span class="badge">sale</span>
+                <div class="product-image">
+                    <img src="https://i.pinimg.com/736x/9c/e5/89/9ce5895cc3da62db114ae33004d3b5a4.jpg" alt="Classic Belt">
+                </div>
+                <i class="fas fa-heart heart-icon"></i>
+                <h3>Classic Belt</h3>
+                <p class="price"><span class="original">$49.99</span> $24.99</p>
+                <button class="btn-quick">Shop Now</button>
+            </div>
+            <div class="product-card featured">
+                <span class="badge">sale</span>
+                <div class="product-image">
+                    <img src="https://i.pinimg.com/736x/82/3e/46/823e46d8a885952926c747d0985c7d6f.jpg" alt="Leather Jacket">
+                </div>
+                <i class="fas fa-heart heart-icon"></i>
+                <h3>Leather Jacket</h3>
+                <p class="price"><span class="original">$129.99</span> $64.99</p>
+                <button class="btn-quick">Shop Now</button>
+            </div>
+            <div class="product-card featured">
+                <span class="badge">sale</span>
+                <div class="product-image">
+                    <img src="https://i.pinimg.com/736x/88/68/f6/8868f6d855e90b05146b82c4069adb5b.jpg" alt="Casual T-Shirt">
+                </div>
+                <i class="fas fa-heart heart-icon"></i>
+                <h3>Casual T-Shirt</h3>
+                <p class="price"><span class="original">$29.99</span> $14.99</p>
+                <button class="btn-quick">Shop Now</button>
+            </div>
+            <div class="product-card featured">
+                <span class="badge">sale</span>
+                <div class="product-image">
+                    <img src="https://i.pinimg.com/1200x/b9/29/af/b929afa3ac4552dda0deb119c5eeb26b.jpg" alt="Summer Shorts">
+                </div>
+                <i class="fas fa-heart heart-icon"></i>
+                <h3>Summer Shorts</h3>
+                <p class="price"><span class="original">$44.99</span> $22.49</p>
+                <button class="btn-quick">Shop Now</button>
+            </div>
+            <div class="product-card featured">
+                <span class="badge">sale</span>
+                <div class="product-image">
+                    <img src="https://i.pinimg.com/1200x/ed/c1/2f/edc12f7a1c3a956232292f73bf301b4b.jpg" alt="Wool Sweater">
+                </div>
+                <i class="fas fa-heart heart-icon"></i>
+                <h3>Wool Sweater</h3>
+                <p class="price"><span class="original">$79.99</span> $39.99</p>
+                <button class="btn-quick">Shop Now</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Limited Offer Section -->
+    <section class="offer">
+        <div class="offer-content">
+            <h2>Limited Offer</h2>
+            <p>35% OFF on this for the first 30 Customers</p>
+            <button class="btn btn-primary">Shop Now</button>
+        </div>
+        <div class="offer-image">
+            <img src="https://i.pinimg.com/1200x/0d/be/18/0dbe18421a5230e8129a8f605deb61a4.jpg" alt="Limited Offer">
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter">
+        <h2>Join our News Letter</h2>
+        <p>Signup for our email newsletter to get exclusive discounts, updates, and more</p>
+        <form class="newsletter-form" onsubmit="handleNewsletterSubmit(event)">
+            <input type="email" placeholder="Enter your email" required>
+            <button type="submit" class="btn btn-primary">Subscribe</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Nostra</h3>
+                <p>The Standard chunk of Lorem ipsum used since the 1500s is reproduced below for those interested.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="collections.html">Collections</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="#about">About Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Nostra.com. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
